@@ -1,0 +1,11 @@
+services:
+  broker:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672" # Porta para comunicação usa o TCP/IP
+      - "15672:15672" # Interface gráfica
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
+volumes:
+  rabbitmq_data:
