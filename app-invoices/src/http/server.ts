@@ -1,3 +1,4 @@
+import "../broker/subscriber.ts";
 import { fastify } from "fastify";
 import { fastifyCors } from "@fastify/cors";
 import {
@@ -17,6 +18,6 @@ app.get("/health-check", () => {
   return "App rodando normalmente!!!";
 });
 
-app.listen({ host: "0.0.0.0", port: 3333 }).then(() => {
+app.listen({ host: "0.0.0.0", port: 3334 }).then(() => {
   console.log("[INVOICES] Tô rodandooooooooo");
 });
